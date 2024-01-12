@@ -8,9 +8,13 @@ To get started with this project, you can simply copy and paste the HTML code in
 You will also need to download and link to the necessary Bootstrap and JS files. You can do this by adding the following links to your HTML file:
 
 Bootstrap CSS: https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css
+
 jQuery: https://code.jquery.com/jquery-3.5.1.slim.min.js
+
 Popper JS: https://cdn.jsdelivr.net/npm/@popperjs/core@2.16.6/dist/umd/popper.min.js
+
 Bootstrap JS: https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js
+
 You can also link to your own custom JS file, as shown in the example code.
 
 ## Using the Delete Button
