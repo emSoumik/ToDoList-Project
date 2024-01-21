@@ -1,5 +1,7 @@
 # ToDoList-Project
 
+View Online : https://emsoumik.github.io/ToDoList-Project/
+
 This project contains the HTML code for a simple webpage that includes a Bootstrap button for deleting an item. The page also includes the necessary links to Bootstrap CSS, jQuery, Popper JS, andstrap JS. Additionally, there is a custom JS file linked at the end.
 
 ## Getting Started
