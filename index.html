@@ -15,6 +15,17 @@
     <div class="card">
         <div class="card-body">
   <h2 style="font-size: 3em; font-weight: bold; background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red); -webkit-background-clip: text; background-clip: text; color: transparent; background-size: 200% 200%; animation: rainbowShine 8s linear infinite;">Todo List</h2>
+
+<style>
+  @keyframes rainbowShine {
+    0% {
+      background-position: 200% 50%;
+    }
+    100% {
+      background-position: -100% 50%;
+    }
+  }
+</style>
             <div class="input-group mb-3">
                 <input id="taskInput" type="text" class="form-control" placeholder="Add a new task" aria-label="" aria-describedby="">
                 <div class="input-group-append">
