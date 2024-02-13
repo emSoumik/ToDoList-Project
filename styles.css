@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+.title {
+    font-size: 3em;
+    font-weight: bold;
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% 200%;
+    animation: rainbowShine 8s linear infinite;
+}
+
+@keyframes rainbowShine {
+    0% {
+      background-position: 200% 50%;
+    }
+    100% {
+      background-position: -100% 50%;
+    }
+}
+
+.completed-task {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.mark-complete {
+    color: white;

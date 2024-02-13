@@ -17,17 +17,28 @@ $(document).ready(function(){
             alert('Please enter a task.');
             return false;
         }
-        $('#taskList').append("<li class='list-group-item d-flex justify-content-between align-items-center'>" + task + "<button type='button' class='btn btn-danger'>Delete</button></li>");
+        $('#taskList').append("<li class='list-group-item d-flex justify-content-between align-items-center'>" + task + "<div><button type='button' class='btn btn-success mark-complete'><i class='fas fa-check'></i></button> <button type='button' class='btn btn-danger delete-task'><i class='fas fa-trash'></i></button></div></li>");
         $('#taskInput').val("");
 
         // Save tasks to localStorage
         localStorage.setItem('tasks', $('#taskList').html());
     });
 
-    $(document).on('click', '.btn-danger', function(){
+    $(document).on('click', '.delete-task', function(){
         $(this).closest('li').remove();
 
         // Save tasks to localStorage
         localStorage.setItem('tasks', $('#taskList').html());
+    });
+
+    $(document).on('click', '.mark-complete', function(){
+        $(this).closest('li').toggleClass('completed-task');
+
+        // Save tasks to localStorage
+        localStorage.setItem('tasks', $('#taskList').html());
+    });
+
+    $('#toggleDarkMode').click(function() {
+        $('body').toggleClass('dark-mode');
     });
 });

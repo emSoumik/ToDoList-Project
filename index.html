@@ -6,26 +6,20 @@
     <title>Todo List</title>
     <!-- Add Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Add custom CSS -->
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
 <div class="container mt-5">
-    <div class="font"
     <div class="card">
         <div class="card-body">
-  <h2 style="font-size: 3em; font-weight: bold; background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red); -webkit-background-clip: text; background-clip: text; color: transparent; background-size: 200% 200%; animation: rainbowShine 8s linear infinite;">Todo List of Daily Stuff for Niggi, cuz she's Lazy ad</h2>
+            <div class="d-flex justify-content-between align-items-center">
+                <h2 class="title">Todo List</h2>
+                <button id="toggleDarkMode" class="btn btn-secondary"><i class="fas fa-moon"></i></button>
+            </div>
 
-<style>
-  @keyframes rainbowShine {
-    0% {
-      background-position: 200% 50%;
-    }
-    100% {
-      background-position: -100% 50%;
-    }
-  }
-</style>
             <div class="input-group mb-3">
                 <input id="taskInput" type="text" class="form-control" placeholder="Add a new task" aria-label="" aria-describedby="">
                 <div class="input-group-append">
@@ -35,24 +29,7 @@
 
             <!-- Todo Items -->
             <ul id='taskList' class='list-group'>
-                <!-- Single Item -->
-                <li class='list-group-item d-flex justify-content-between align-items-center'>
-                    Submit all IWT assignments
-                    <!-- Delete Button -->
-                    <button type='button' class='btn btn-danger'>Delete</button> 
-                </li>
-
-                <!-- More items can be added similarly -->
-                <li class='list-group-item d-flex justify-content-between align-items-center'>
-                    Finish reading 'The Alchemist'
-                    <!-- Delete Button -->
-                    <button type='button' class='btn btn-danger'>Delete</button> 
-                </li>
-                <li class='list-group-item d-flex justify-content-between align-items-center'>
-                    Buy groceries
-                    <!-- Delete Button -->
-                    <button type='button' class='btn btn-danger'>Delete</button> 
-                </li>
+                <!-- Items will be added here via JavaScript -->
             </ul> 
         </div>
     </div>
@@ -66,4 +43,4 @@
 <script src="script.js"></script>
 
 </body>
-</html> 
+</html>
