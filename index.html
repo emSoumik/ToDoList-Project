@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
     <!-- Add Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Add Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Add custom CSS -->
     <link href="styles.css" rel="stylesheet">
 </head>
@@ -16,7 +16,7 @@
     <div class="card">
         <div class="card-body">
             <div class="d-flex justify-content-between align-items-center">
-                <h2 class="title">Todo List</h2>
+                <h2 class="title">Todo-List</h2>
                 <button id="toggleDarkMode" class="btn btn-secondary"><i class="fas fa-moon"></i></button>
             </div>
 
@@ -34,6 +34,20 @@
         </div>
     </div>
 </div>
+<!-- Add Sortable.js library -->
+<script src=" https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+
+<!-- Add  code to make the task list sortable -->
+<script>
+  Sortable.create(taskList, {
+    animation: 150,
+    ghostClass: 'ghost',
+    onEnd: function(evt) {
+      // Save tasks to localStorage in the new order
+      localStorage. setItem('tasks', $('#taskList').html());
+    }
+  });
+</script>
 
 <!-- Add Bootstrap JS and Popper JS -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -41,6 +55,5 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!-- Add custom JS -->
 <script src="script.js"></script>
-
 </body>
 </html>
